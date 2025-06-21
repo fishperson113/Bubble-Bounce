@@ -1,0 +1,4 @@
+repository "Bubble-Bounce/Bubble-Bounce@18967886616247@cloud"
+  path "/"
+    br "/main"
+    co "/main"
