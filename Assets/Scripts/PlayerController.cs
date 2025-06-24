@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gapSize = 0.2f;           // Increased from 0.1f to 0.2f
     [SerializeField] private int lineThickness = 3;          // New parameter for simulated thickness
     [SerializeField] private float thicknessSpacing = 0.05f; // New parameter for spacing between lines
+    [Header("Initial Position")]
+    private Vector3 initialPosition;
+    private Animator playerAnim;
+    private bool isJumping;
 
     private Rigidbody2D rb;
     private bool isAlive = true;
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<Animator>();
         if (rb == null)
         {
             rb = gameObject.AddComponent<Rigidbody2D>();
@@ -47,6 +52,9 @@ public class PlayerController : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         currentDirection = Vector2.down;
+        initialPosition = transform.position;
+        
+
     }
 
     void Update()
@@ -55,6 +63,11 @@ public class PlayerController : MonoBehaviour
 
         ApplyGravity();
         currentDirection = new Vector2(0, currentVerticalVelocity).normalized;
+
+        if (playerAnim != null)
+        {
+            playerAnim.SetBool("isJumping", isJumping);
+        }
     }
 
     private void ApplyGravity()
@@ -105,6 +118,7 @@ public class PlayerController : MonoBehaviour
         // Squash effect on impact
         transform.DOPunchScale(new Vector3(squashAmount, squashAmount, 0), squashDuration, 2, 0.5f);
 
+        isJumping = true;
         // Move the player using DOTween
         transform.DOMove(reflectionTarget, reflectionDuration)
             .SetEase(reflectionEase)
@@ -113,6 +127,7 @@ public class PlayerController : MonoBehaviour
 
                 // This makes the player stop moving after the reflection and continue falling
                 currentVerticalVelocity = direction.y * distance * 0.5f;
+                isJumping = false;
             });
     }
     // Draw direction gizmo
@@ -224,7 +239,14 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        isGrounded = true;
+        if (collision.collider.CompareTag("Ground"))
+        {
+            transform.position = initialPosition;
+            currentVerticalVelocity = 0f;
+            isGrounded = false;
+            isBeingReflected = false;
+            DOTween.Kill(transform);
+        }
     }
     void OnCollisionExit2D(Collision2D collision)
     {

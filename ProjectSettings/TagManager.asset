@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Bubble
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: 1Sky
+    uniqueID: 2318123331
+    locked: 0
+  - name: 2BG_Decor
+    uniqueID: 1843685709
+    locked: 0
+  - name: 3Middle_Decor
+    uniqueID: 2679651927
+    locked: 0
+  - name: 4Foreground
+    uniqueID: 2910233947
+    locked: 0
+  - name: Player
+    uniqueID: 4020421197
+    locked: 0
+  - name: 5Ground
+    uniqueID: 275996107
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

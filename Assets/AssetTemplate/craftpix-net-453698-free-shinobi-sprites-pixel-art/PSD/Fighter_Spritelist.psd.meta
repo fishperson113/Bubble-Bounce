@@ -1,0 +1,1482 @@
+fileFormatVersion: 2
+guid: 85d7c19655d856b488dcf5ad021584a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 379639819003089545
+    second: Fighter_Spritelist_0
+  - first:
+      213: -2575335953741880472
+    second: Fighter_Spritelist_1
+  - first:
+      213: 2385240889527858563
+    second: Fighter_Spritelist_2
+  - first:
+      213: -449516744443954881
+    second: Fighter_Spritelist_3
+  - first:
+      213: 3085493453178764930
+    second: Fighter_Spritelist_4
+  - first:
+      213: 2567643301429548497
+    second: Fighter_Spritelist_5
+  - first:
+      213: 2283567369111575616
+    second: Fighter_Spritelist_6
+  - first:
+      213: -303262346743716886
+    second: Fighter_Spritelist_7
+  - first:
+      213: 7566579897623381459
+    second: Fighter_Spritelist_8
+  - first:
+      213: -8077630160843486270
+    second: Fighter_Spritelist_9
+  - first:
+      213: 3898841752132953810
+    second: Fighter_Spritelist_10
+  - first:
+      213: 8517251170212233580
+    second: Fighter_Spritelist_11
+  - first:
+      213: 2956975894347831794
+    second: Fighter_Spritelist_12
+  - first:
+      213: 5338748417559683660
+    second: Fighter_Spritelist_13
+  - first:
+      213: -7434252123856536804
+    second: Fighter_Spritelist_14
+  - first:
+      213: -1518482374542180239
+    second: Fighter_Spritelist_15
+  - first:
+      213: 6563988020043997071
+    second: Fighter_Spritelist_16
+  - first:
+      213: -4979038385549200610
+    second: Fighter_Spritelist_17
+  - first:
+      213: -5065736496330014679
+    second: Fighter_Spritelist_18
+  - first:
+      213: 8296769763622605324
+    second: Fighter_Spritelist_19
+  - first:
+      213: -6597558612354236449
+    second: Fighter_Spritelist_20
+  - first:
+      213: 1206741196384265768
+    second: Fighter_Spritelist_21
+  - first:
+      213: -6903089218318046929
+    second: Fighter_Spritelist_22
+  - first:
+      213: 4581686270297187184
+    second: Fighter_Spritelist_23
+  - first:
+      213: 399963562718000112
+    second: Fighter_Spritelist_24
+  - first:
+      213: 6500454283403163486
+    second: Fighter_Spritelist_25
+  - first:
+      213: -2123173735382500841
+    second: Fighter_Spritelist_26
+  - first:
+      213: 8776488287564579441
+    second: Fighter_Spritelist_27
+  - first:
+      213: 518320697557480917
+    second: Fighter_Spritelist_28
+  - first:
+      213: 2510265577746779478
+    second: Fighter_Spritelist_29
+  - first:
+      213: 9087296793139618960
+    second: Fighter_Spritelist_30
+  - first:
+      213: -1956998055297215213
+    second: Fighter_Spritelist_31
+  - first:
+      213: -4887500350959257921
+    second: Fighter_Spritelist_32
+  - first:
+      213: -6024243429271258113
+    second: Fighter_Spritelist_33
+  - first:
+      213: -3730873627376986983
+    second: Fighter_Spritelist_34
+  - first:
+      213: -2941164502896490483
+    second: Fighter_Spritelist_35
+  - first:
+      213: 2419419445026401988
+    second: Fighter_Spritelist_36
+  - first:
+      213: -7337834202020352573
+    second: Fighter_Spritelist_37
+  - first:
+      213: -8088888665116619385
+    second: Fighter_Spritelist_38
+  - first:
+      213: -2396677733947419278
+    second: Fighter_Spritelist_39
+  - first:
+      213: 1105151624484948924
+    second: Fighter_Spritelist_40
+  - first:
+      213: -5463856360404853003
+    second: Fighter_Spritelist_41
+  - first:
+      213: -6054139070257004633
+    second: Fighter_Spritelist_42
+  - first:
+      213: -2814260794061391455
+    second: Fighter_Spritelist_43
+  - first:
+      213: 7037792824375308043
+    second: Fighter_Spritelist_44
+  - first:
+      213: 6922101068631400146
+    second: Fighter_Spritelist_45
+  - first:
+      213: -4855927395965003762
+    second: Fighter_Spritelist_46
+  - first:
+      213: 7788385068226175976
+    second: Fighter_Spritelist_47
+  - first:
+      213: -4294949600573477491
+    second: Fighter_Spritelist_48
+  - first:
+      213: 8077582823486574031
+    second: Fighter_Spritelist_49
+  - first:
+      213: 4282091246415821843
+    second: Fighter_Spritelist_50
+  - first:
+      213: -8916318985078352873
+    second: Fighter_Spritelist_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fighter_Spritelist_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1154
+        width: 30
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaadbb3be11f9f4dbd481b8e5029c8c
+      internalID: -265141100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1154
+        width: 30
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b2398bac593bf4c842fe9172fc02e9
+      internalID: -1645789597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1154
+        width: 31
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6945a52bf95f22d4c9d0b6dd49859b33
+      internalID: 1321136585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1154
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1549b678555c45242b9c4f94d1205f90
+      internalID: 1448605647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1154
+        width: 31
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab00ca28f30ad3744877c4030f1da46c
+      internalID: 805518969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1154
+        width: 30
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a815df6320bde84392569311774d574
+      internalID: 1921615172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1024
+        width: 24
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e42810a24a2a1418736ed9d73fcc8d
+      internalID: 960628564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_7
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1024
+        width: 27
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50c44f3656cac94a82bbdf10d3e5689
+      internalID: -1076742136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_8
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1024
+        width: 35
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3f4e19be02c974bb0643fb9604c0bb
+      internalID: -375963426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1024
+        width: 28
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75767d724ffb184eb8a897a31d60404
+      internalID: 756815729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_10
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1024
+        width: 22
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244eaa2844924d84b90d284093574013
+      internalID: 25995456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_11
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 1024
+        width: 25
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925dcf09a55b98c4f817b7277944209c
+      internalID: 1250186379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_12
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1024
+        width: 33
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab69045fbf83e12449d07165424907b8
+      internalID: 1977363401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_13
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1024
+        width: 28
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975f21131d479f14f8ce7771f6fb5d03
+      internalID: 1152024448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 896
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df49a8bfec65454ca5ab400903339a9
+      internalID: -1214370156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 896
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51dbe774b63c994d8ffe3261f86542d
+      internalID: 305796555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_16
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 896
+        width: 52
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67eea9b8afe90744a06cb38a5e1fdbf
+      internalID: 1998981108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_17
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 896
+        width: 37
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f36027285fedf24f967a6ee5ba4db34
+      internalID: -47749351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_18
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 896
+        width: 33
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c508d940f1fcc964f8c502fcf47824b5
+      internalID: 1513802871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_19
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 896
+        width: 44
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2954f74a378fb8c48b6eb9e6ac254d21
+      internalID: -552297965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_20
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 896
+        width: 57
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2880799bd1331c4ea7d40fb9ed74901
+      internalID: 519767197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_21
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 896
+        width: 38
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3581f07583f594fa81b359fd90d78d
+      internalID: 207075704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_22
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 768
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021098c1b5b1a154d942cafa4057b9b7
+      internalID: 689905726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_23
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 768
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3338bb0dfc3916428cc44c4ffed3a27
+      internalID: 1712718002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_24
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 768
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424912727f14da0458bb9a33e4fc758b
+      internalID: 465775764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_25
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 768
+        width: 43
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8177b9cb0ee851343bfbcc5760176e62
+      internalID: -270519735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_26
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 773
+        width: 39
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64a129791702e64db8fe17dd3aca456
+      internalID: 2117648219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_27
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 771
+        width: 37
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ed04cd60310984c8ceef6766099309
+      internalID: 627368440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_28
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 768
+        width: 34
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a184c578323b5440a2a1563411776d9
+      internalID: -317201236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_29
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 768
+        width: 29
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0ef68a2f153b141bb84d8546372310
+      internalID: 1613788840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_30
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 768
+        width: 33
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5608199b5255cc4b9b0020e027bf9f3
+      internalID: 457995395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_31
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 768
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdd3d4db688272419ff28f5272b51c0
+      internalID: -939618746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_32
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 640
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31d14deac725c246956a45e00afa5da
+      internalID: 527209005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_33
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 640
+        width: 37
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecf7422828b6d94aba709ade6eefc27
+      internalID: 1185415158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_34
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 640
+        width: 53
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bfc979d41ae7f47bcfcdc02b478436
+      internalID: 360397264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_35
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 640
+        width: 57
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d932c61315fe9548988bba4f59505cb
+      internalID: -1220120559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_36
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 512
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944f58f759282874ba75cf38b4060020
+      internalID: 1776786372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_37
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 512
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df71ca6779c743a41b5f643223a15da5
+      internalID: 1804428713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_38
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 512
+        width: 57
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9c03ea406f82f43ab3894c0bd761e8
+      internalID: 1429015428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 52
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed685e88388377f4a81c70488f75a7ab
+      internalID: 1027102967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_40
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 384
+        width: 31
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3a65edcae7be94493848f91e3f7b57
+      internalID: 1054282305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_41
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 384
+        width: 55
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa081135bcd9e441a50e795ce053810
+      internalID: -1332441413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_42
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 397
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220c4ebf8a0f44b4b9f798da25e56d39
+      internalID: 592658799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_43
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 384
+        width: 54
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4522d23c88399304ba8b89c92f39e357
+      internalID: -311793159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4961d157bc746e84d972433e980bb2c0
+      internalID: 1529959183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 46
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3866a80d3285a6743854d217ef671e9c
+      internalID: -2005012683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_46
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 128
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6ac90d3df5f3b4593b8bdbdce10c8d
+      internalID: -1755363036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_47
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 128
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e115c4deb51674e4fa62744cd54fd9c3
+      internalID: -1114596285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_48
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 128
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04075a62b79f95646831fc3a65f029c8
+      internalID: 1116002163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_49
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fca41758f702ed4a9eb378204982bdc
+      internalID: -584364470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_50
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7dc22d64c30a841960bac8734ced8d
+      internalID: -1991456325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter_Spritelist_51
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 74
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec60cfeec6f1db4c819eaaac87d0add
+      internalID: -177794373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b347721380c2f2948a6baf97e9e1fe3b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fighter_Spritelist_0: -265141100
+      Fighter_Spritelist_1: -1645789597
+      Fighter_Spritelist_10: 25995456
+      Fighter_Spritelist_11: 1250186379
+      Fighter_Spritelist_12: 1977363401
+      Fighter_Spritelist_13: 1152024448
+      Fighter_Spritelist_14: -1214370156
+      Fighter_Spritelist_15: 305796555
+      Fighter_Spritelist_16: 1998981108
+      Fighter_Spritelist_17: -47749351
+      Fighter_Spritelist_18: 1513802871
+      Fighter_Spritelist_19: -552297965
+      Fighter_Spritelist_2: 1321136585
+      Fighter_Spritelist_20: 519767197
+      Fighter_Spritelist_21: 207075704
+      Fighter_Spritelist_22: 689905726
+      Fighter_Spritelist_23: 1712718002
+      Fighter_Spritelist_24: 465775764
+      Fighter_Spritelist_25: -270519735
+      Fighter_Spritelist_26: 2117648219
+      Fighter_Spritelist_27: 627368440
+      Fighter_Spritelist_28: -317201236
+      Fighter_Spritelist_29: 1613788840
+      Fighter_Spritelist_3: 1448605647
+      Fighter_Spritelist_30: 457995395
+      Fighter_Spritelist_31: -939618746
+      Fighter_Spritelist_32: 527209005
+      Fighter_Spritelist_33: 1185415158
+      Fighter_Spritelist_34: 360397264
+      Fighter_Spritelist_35: -1220120559
+      Fighter_Spritelist_36: 1776786372
+      Fighter_Spritelist_37: 1804428713
+      Fighter_Spritelist_38: 1429015428
+      Fighter_Spritelist_39: 1027102967
+      Fighter_Spritelist_4: 805518969
+      Fighter_Spritelist_40: 1054282305
+      Fighter_Spritelist_41: -1332441413
+      Fighter_Spritelist_42: 592658799
+      Fighter_Spritelist_43: -311793159
+      Fighter_Spritelist_44: 1529959183
+      Fighter_Spritelist_45: -2005012683
+      Fighter_Spritelist_46: -1755363036
+      Fighter_Spritelist_47: -1114596285
+      Fighter_Spritelist_48: 1116002163
+      Fighter_Spritelist_49: -584364470
+      Fighter_Spritelist_5: 1921615172
+      Fighter_Spritelist_50: -1991456325
+      Fighter_Spritelist_51: -177794373
+      Fighter_Spritelist_6: 960628564
+      Fighter_Spritelist_7: -1076742136
+      Fighter_Spritelist_8: -375963426
+      Fighter_Spritelist_9: 756815729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
