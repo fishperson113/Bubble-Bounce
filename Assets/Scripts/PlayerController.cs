@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float squashAmount = 0.3f;
     [SerializeField] private float squashDuration = 0.3f;
 
+
     [Header("Gizmo Settings")]
     [SerializeField] private bool showDirectionGizmo = true;
     [SerializeField] private float gizmoLength = 4f;         // Increased from 2f to 4f
@@ -24,10 +26,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gapSize = 0.2f;           // Increased from 0.1f to 0.2f
     [SerializeField] private int lineThickness = 3;          // New parameter for simulated thickness
     [SerializeField] private float thicknessSpacing = 0.05f; // New parameter for spacing between lines
-    [Header("Initial Position")]
-    private Vector3 initialPosition;
+
+    [Header("Health Management")]
+    [SerializeField] private PlayerHealthManager healthManager;
+
+    [Header("Revive Position")]
+    [SerializeField] private Vector2 screenOffset = new Vector2(-0.3f, 0.2f);
+
     private Animator playerAnim;
     private bool isJumping;
+    private bool isDied = false;
+
 
     private Rigidbody2D rb;
     private bool isAlive = true;
@@ -52,7 +61,6 @@ public class PlayerController : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         currentDirection = Vector2.down;
-        initialPosition = transform.position;
         
 
     }
@@ -67,6 +75,10 @@ public class PlayerController : MonoBehaviour
         if (playerAnim != null)
         {
             playerAnim.SetBool("isJumping", isJumping);
+        }
+        if (playerAnim != null)
+        {
+            playerAnim.SetBool("isDied", isDied);
         }
     }
 
@@ -237,15 +249,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void BackToOffsetPositionInCamera()
+    {
+        float screenX = Screen.width * (0.5f + (screenOffset.x));
+        float screenY = Screen.height * (0.5f + (screenOffset.y));
+
+        Vector3 screenPosition = new Vector3(screenX, screenY, Camera.main.nearClipPlane);
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+        worldPosition.z = 0f;
+
+        transform.position = worldPosition;
+    }
+
+    private IEnumerator BackAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isDied = false;
+        BackToOffsetPositionInCamera();
+    }
+
+
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ground"))
         {
-            transform.position = initialPosition;
+            isDied = true;
+
             currentVerticalVelocity = 0f;
             isGrounded = false;
             isBeingReflected = false;
             DOTween.Kill(transform);
+            healthManager.LoseHeart();
+            StartCoroutine(BackAfterDelay(5f)); 
+
         }
     }
     void OnCollisionExit2D(Collision2D collision)
