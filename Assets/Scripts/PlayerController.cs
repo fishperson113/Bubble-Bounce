@@ -1,12 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 using System.Collections;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float gravity = 9.8f;
     [SerializeField] private float maxFallSpeed = 10f;
+    [SerializeField] private float horizontalMomentumDecay = 0.995f; // Control horizontal slowdown
 
     [Header("Bubble Reflection")]
     [SerializeField] private float bubbleReflectionMultiplier = 2f;
@@ -17,15 +19,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float squashAmount = 0.3f;
     [SerializeField] private float squashDuration = 0.3f;
 
-
     [Header("Gizmo Settings")]
     [SerializeField] private bool showDirectionGizmo = true;
-    [SerializeField] private float gizmoLength = 4f;         // Increased from 2f to 4f
+    [SerializeField] private float gizmoLength = 4f;
     [SerializeField] private Color gizmoColor = Color.yellow;
-    [SerializeField] private float dashSize = 0.4f;          // Increased from 0.2f to 0.4f
-    [SerializeField] private float gapSize = 0.2f;           // Increased from 0.1f to 0.2f
-    [SerializeField] private int lineThickness = 3;          // New parameter for simulated thickness
-    [SerializeField] private float thicknessSpacing = 0.05f; // New parameter for spacing between lines
+    [SerializeField] private float dashSize = 0.4f;
+    [SerializeField] private float gapSize = 0.2f;
+    [SerializeField] private int lineThickness = 3;
+    [SerializeField] private float thicknessSpacing = 0.05f;
 
     [Header("Health Management")]
     [SerializeField] private PlayerHealthManager healthManager;
@@ -37,15 +38,17 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
     private bool isDied = false;
 
-
     private Rigidbody2D rb;
     private bool isAlive = true;
     private float currentVerticalVelocity = 0f;
+    private float currentHorizontalVelocity = 0f;
+
     private bool isGrounded = false;
 
     private bool isBeingReflected = false;
     private Vector3 reflectionTarget;
     private Vector2 currentDirection;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,38 +59,25 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Rigidbody2D component added to player");
         }
 
-        rb.gravityScale = 0f; 
+        rb.gravityScale = gravity / 9.8f; 
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb.linearVelocity = Vector2.zero;
 
         currentDirection = Vector2.down;
-        
-
     }
 
     void Update()
     {
-        if (!isAlive|| isGrounded) return;
+        if (!isAlive) return;
 
-        ApplyGravity();
-        currentDirection = new Vector2(0, currentVerticalVelocity).normalized;
+        currentDirection = rb.linearVelocity.normalized;
 
         if (playerAnim != null)
         {
-            playerAnim.SetBool("isJumping", isJumping);
-        }
-        if (playerAnim != null)
-        {
+            playerAnim.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0.1f);
             playerAnim.SetBool("isDied", isDied);
         }
-    }
-
-    private void ApplyGravity()
-    {
-        currentVerticalVelocity -= gravity * Time.deltaTime;
-        currentVerticalVelocity = Mathf.Max(currentVerticalVelocity, -maxFallSpeed);
-
-        transform.Translate(0, currentVerticalVelocity * Time.deltaTime, 0);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -97,17 +87,11 @@ public class PlayerController : MonoBehaviour
             Bubble bubble = other.GetComponent<Bubble>();
             if (bubble != null)
             {
-                // Calculate reflection direction (away from bubble center)
                 Vector2 reflectionDirection = (transform.position - other.transform.position).normalized;
-
                 float bubbleForce = bubble.GetBubbleForce();
-
                 float reflectionDistance = bubbleReflectionMultiplier * bubbleForce;
 
-                // Apply the reflection using DOTween
                 ApplyReflection(reflectionDirection, reflectionDistance);
-
-                // Pop the bubble
                 bubble.Pop();
             }
         }
@@ -115,32 +99,22 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyReflection(Vector2 direction, float distance)
     {
-        // Flag that reflection is happening
         isBeingReflected = true;
 
-        // Update current direction for gizmo
-        currentDirection = direction;
-
-        // Kill any existing tweens
-        DOTween.Kill(transform);
-
-        // Set the reflection target for the gizmo (this was missing)
-        reflectionTarget = transform.position + (Vector3)(direction * distance);
-
-        // Squash effect on impact
         transform.DOPunchScale(new Vector3(squashAmount, squashAmount, 0), squashDuration, 2, 0.5f);
 
         isJumping = true;
-        // Move the player using DOTween
-        transform.DOMove(reflectionTarget, reflectionDuration)
-            .SetEase(reflectionEase)
-            .OnComplete(() => {
-                isBeingReflected = false;
 
-                // This makes the player stop moving after the reflection and continue falling
-                currentVerticalVelocity = direction.y * distance * 0.5f;
-                isJumping = false;
-            });
+        float speed = distance / reflectionDuration;
+        Vector2 velocity = direction.normalized * speed;
+
+        rb.linearVelocity = velocity;
+
+        DOVirtual.DelayedCall(reflectionDuration, () =>
+        {
+            isBeingReflected = false;
+            isJumping = false;
+        });
     }
     // Draw direction gizmo
     // Draw direction gizmo with dashed lines
@@ -267,9 +241,6 @@ public class PlayerController : MonoBehaviour
         isDied = false;
         BackToOffsetPositionInCamera();
     }
-
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ground"))
