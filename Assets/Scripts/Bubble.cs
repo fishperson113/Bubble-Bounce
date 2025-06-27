@@ -1,17 +1,19 @@
 using DG.Tweening;
+using System;
 using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
     [Header("Animation Settings")]
-    [SerializeField] private float initialGrowDuration = 0.2f;
     [SerializeField] private float shrinkDuration = 0.3f;
-    [SerializeField] private Ease initialGrowEase = Ease.OutBack;
     [SerializeField] private Ease shrinkEase = Ease.InBack;
 
     [Header("Effects")]
     [SerializeField] private ParticleSystem popEffect;
     [SerializeField] private AudioClip popSound;
+
+    [Header("Stats")]
+    [SerializeField] private float speed = 5f;
 
     private float bubbleForce;
 
@@ -33,13 +35,6 @@ public class Bubble : MonoBehaviour
         {
             currentAnimation.Kill();
         }
-
-        Vector3 targetScale = transform.localScale;
-
-        transform.localScale = Vector3.zero;
-
-        currentAnimation = DOTween.Sequence();
-        currentAnimation.Append(transform.DOScale(targetScale, initialGrowDuration).SetEase(initialGrowEase));
     }
 
     public void SetBubbleForce(float force)
@@ -108,6 +103,15 @@ public class Bubble : MonoBehaviour
         {
             currentAnimation.Kill();
             currentAnimation = null;
+        }
+    }
+
+    public void Launch(Vector2 direction)
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = direction*speed;
         }
     }
 }

@@ -7,13 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float gravity = 9.8f;
-    [SerializeField] private float maxFallSpeed = 10f;
-    [SerializeField] private float horizontalMomentumDecay = 0.995f; // Control horizontal slowdown
 
     [Header("Bubble Reflection")]
     [SerializeField] private float bubbleReflectionMultiplier = 2f;
     [SerializeField] private float reflectionDuration = 0.5f;
-    [SerializeField] private Ease reflectionEase = Ease.OutBack;
 
     [Header("Animation")]
     [SerializeField] private float squashAmount = 0.3f;
@@ -35,13 +32,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 screenOffset = new Vector2(-0.3f, 0.2f);
 
     private Animator playerAnim;
-    private bool isJumping;
     private bool isDied = false;
 
     private Rigidbody2D rb;
     private bool isAlive = true;
-    private float currentVerticalVelocity = 0f;
-    private float currentHorizontalVelocity = 0f;
 
     private bool isGrounded = false;
 
@@ -103,8 +97,6 @@ public class PlayerController : MonoBehaviour
 
         transform.DOPunchScale(new Vector3(squashAmount, squashAmount, 0), squashDuration, 2, 0.5f);
 
-        isJumping = true;
-
         float speed = distance / reflectionDuration;
         Vector2 velocity = direction.normalized * speed;
 
@@ -113,7 +105,6 @@ public class PlayerController : MonoBehaviour
         DOVirtual.DelayedCall(reflectionDuration, () =>
         {
             isBeingReflected = false;
-            isJumping = false;
         });
     }
     // Draw direction gizmo
@@ -247,7 +238,6 @@ public class PlayerController : MonoBehaviour
         {
             isDied = true;
 
-            currentVerticalVelocity = 0f;
             isGrounded = false;
             isBeingReflected = false;
             DOTween.Kill(transform);

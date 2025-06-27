@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class BubbleManager : MonoBehaviour
@@ -6,7 +6,6 @@ public class BubbleManager : MonoBehaviour
     [Header("Bubble Settings")]
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField] private int initialPoolSize = 10;
-    [SerializeField] private float bubbleMaxSize = 1f;
 
     [Header("Bubble Force Settings")]
     [SerializeField] private float minBubbleSize = 0.3f;
@@ -17,14 +16,23 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private int maxActiveBubbles = 5;
     [SerializeField] private float bubbleForce = 5f;
 
+    [Header("Draw Settings")]
+    [SerializeField] private DrawManager drawManager;
+    [SerializeField] private float minSwipeToShowLine = 20f;
+
     private List<GameObject> bubblePool;
     private List<GameObject> activeBubbles;
     private Camera mainCamera;
 
     private bool isHolding = false;
-    private float holdStartTime = 0f;
+    private float holdDuration = 0f;
     private GameObject currentGrowingBubble = null;
 
+    private Vector2 swipeStart;
+    private Vector2 swipeEnd;
+    Vector2 direction;
+    Vector2 swipe;
+    Vector3 worldStart;
     private void Awake()
     {
         bubblePool = new List<GameObject>();
@@ -39,6 +47,7 @@ public class BubbleManager : MonoBehaviour
         // Check for mouse button down to start growing a bubble
         if (Input.GetMouseButtonDown(0))
         {
+            swipeStart = Input.mousePosition;
             StartBubbleGrow();
         }
 
@@ -70,6 +79,7 @@ public class BubbleManager : MonoBehaviour
 
     private void StartBubbleGrow()
     {
+        PauseGameTime();
         // Limit the number of active bubbles
         if (activeBubbles.Count >= maxActiveBubbles)
         {
@@ -97,8 +107,8 @@ public class BubbleManager : MonoBehaviour
 
         // Start tracking the hold
         isHolding = true;
-        holdStartTime = Time.time;
         currentGrowingBubble = bubble;
+        holdDuration = 0f;
 
         // Add to active bubbles list
         activeBubbles.Add(bubble);
@@ -108,8 +118,10 @@ public class BubbleManager : MonoBehaviour
     {
         if (currentGrowingBubble == null) return;
 
-        float holdTime = Time.time - holdStartTime;
-        float forcePercentage = Mathf.Clamp01(holdTime / timeToMaxForce);
+        holdDuration += Time.unscaledDeltaTime;
+
+        //float forcePercentage = Mathf.Clamp01(holdTime / timeToMaxForce);
+        float forcePercentage = Mathf.Clamp01(holdDuration / timeToMaxForce);
 
         float currentSize = Mathf.Lerp(minBubbleSize, maxBubbleSize, forcePercentage);
 
@@ -122,6 +134,15 @@ public class BubbleManager : MonoBehaviour
             bubbleComponent.SetBubbleForce(currentForce);
         }
 
+        swipeEnd = Input.mousePosition;
+        direction = Vector2.zero;
+        swipe = swipeEnd - swipeStart;
+        worldStart = currentGrowingBubble.transform.position;
+        if (swipe.magnitude >= minSwipeToShowLine)
+        {
+            direction = -swipe.normalized;
+        }
+        drawManager.DrawAimingLine(worldStart, swipe);
         // Automatically finalize the bubble if it reaches maximum size
         if (forcePercentage >= 0.99f)
         {
@@ -132,6 +153,14 @@ public class BubbleManager : MonoBehaviour
     private void FinalizeBubble()
     {
         if (currentGrowingBubble == null) return;
+        ResumeGameTime();
+        drawManager.HideAimingLine();
+
+        Bubble bubbleComponent = currentGrowingBubble.GetComponent<Bubble>();
+        if (bubbleComponent != null)
+        {
+            bubbleComponent.Launch(direction);
+        }
 
         // Reset holding state
         isHolding = false;
@@ -200,5 +229,14 @@ public class BubbleManager : MonoBehaviour
     public void OnBubblePopped(GameObject bubble)
     {
         activeBubbles.Remove(bubble);
+    }
+    private void PauseGameTime()
+    {
+        Time.timeScale = 0f;
+    }
+
+    private void ResumeGameTime()
+    {
+        Time.timeScale = 1f;
     }
 }
