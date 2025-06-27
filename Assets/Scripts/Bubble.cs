@@ -14,6 +14,7 @@ public class Bubble : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float reflectionMultiplier = 2f;
 
     private float bubbleForce;
 
@@ -37,15 +38,8 @@ public class Bubble : MonoBehaviour
         }
     }
 
-    public void SetBubbleForce(float force)
-    {
-        bubbleForce = force;
-    }
-
-    public float GetBubbleForce()
-    {
-        return bubbleForce;
-    }
+    public void SetBubbleForce(float force) => bubbleForce = force;
+    public float GetBubbleForce() => bubbleForce;
 
     public void BeginShrink()
     {
@@ -112,6 +106,17 @@ public class Bubble : MonoBehaviour
         if (rb != null)
         {
             rb.linearVelocity = direction*speed;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var reflectable = other.GetComponent<IReflectable>();
+        if (reflectable != null)
+        {
+            Vector2 dir = (other.transform.position - transform.position).normalized;
+            float distance = bubbleForce * reflectionMultiplier;
+            reflectable.ApplyReflection(dir, distance);
+            Pop();
         }
     }
 }

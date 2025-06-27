@@ -20,6 +20,9 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private DrawManager drawManager;
     [SerializeField] private float minSwipeToShowLine = 20f;
 
+    [Header("Hierarchy Settings")]
+    [SerializeField] private Transform bubbleContainer;
+
     private List<GameObject> bubblePool;
     private List<GameObject> activeBubbles;
     private Camera mainCamera;
@@ -71,7 +74,7 @@ public class BubbleManager : MonoBehaviour
     {
         for (int i = 0; i < initialPoolSize; i++)
         {
-            GameObject bubble = Instantiate(bubblePrefab, Vector3.zero, Quaternion.identity, transform);
+            GameObject bubble = Instantiate(bubblePrefab, Vector3.zero, Quaternion.identity, bubbleContainer);
             bubble.SetActive(false);
             bubblePool.Add(bubble);
         }
@@ -120,7 +123,6 @@ public class BubbleManager : MonoBehaviour
 
         holdDuration += Time.unscaledDeltaTime;
 
-        //float forcePercentage = Mathf.Clamp01(holdTime / timeToMaxForce);
         float forcePercentage = Mathf.Clamp01(holdDuration / timeToMaxForce);
 
         float currentSize = Mathf.Lerp(minBubbleSize, maxBubbleSize, forcePercentage);
