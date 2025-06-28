@@ -12,7 +12,8 @@ public class PlayerHealthManager : MonoBehaviour
     public Sprite emptyHeartSprite;
 
     [Header("Game Over UI")]
-    [SerializeField] private GameObject gameOverPanel;  
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private TMPro.TMP_Text gameOverScoreText;
 
 
     void Start()
@@ -51,6 +52,11 @@ public class PlayerHealthManager : MonoBehaviour
     {
         Debug.Log("Game Over");
 
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.StopMusic();
+        }
+
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
 
@@ -69,6 +75,24 @@ public class PlayerHealthManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayMusic();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+
+    public void SetGameOverScore(float score)
+    {
+        if (gameOverScoreText != null)
+        {
+            gameOverScoreText.text = $"Score: {Mathf.FloorToInt(score)} m";
+        }
+    }
+
+    public int GetCurrentHeart()
+    {
+        return currentHearts;
     }
 }

@@ -102,12 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1efd34af08e39947a5c377106f92116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialGrowDuration: 0.2
   shrinkDuration: 0.3
-  initialGrowEase: 27
   shrinkEase: 26
   popEffect: {fileID: 0}
-  popSound: {fileID: 0}
+  popSound: {fileID: 8300000, guid: 54498937d31399640abe5cf80a18458d, type: 3}
+  speed: 5
+  reflectionMultiplier: 2
 --- !u!58 &1108839075789409541
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using DG.Tweening;
 using System.Collections;
 using System;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Projection Settings")]
     [SerializeField] private Projection projection;
+
+    [Header("UI")]
+    [SerializeField] private TMP_Text distanceText;
+
+    private float startX;
+    private float distanceTravelled = 0f;
 
     private Animator playerAnim;
     private bool isDied = false;
@@ -41,12 +48,12 @@ public class PlayerController : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.linearVelocity = Vector2.zero;
 
+        startX = transform.position.x;
+        distanceTravelled = 0f;
     }
 
     void Update()
     {
-        if (!isAlive) return;
-
         if (Time.timeScale == 0f && projection != null)
         {
             projection.SimulateTrajectory(rb.linearVelocity);
@@ -59,6 +66,12 @@ public class PlayerController : MonoBehaviour
         {
             playerAnim.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0.1f);
             playerAnim.SetBool("isDied", isDied);
+        }
+        if (isAlive)
+        {
+            distanceTravelled = transform.position.x - startX;
+            if (distanceTravelled < 0) distanceTravelled = 0;
+            distanceText.text = $"{Mathf.FloorToInt(distanceTravelled)} m";
         }
     }
 
@@ -77,22 +90,44 @@ public class PlayerController : MonoBehaviour
     private IEnumerator BackAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        isDied = false;
+
         BackToOffsetPositionInCamera();
+        isDied = false;
+        isAlive = true; 
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Ground"))
+        if (!isAlive) return; 
+
+        if (collision.collider.CompareTag("Obstacle"))
         {
-            isDied = true;
-
-            isGrounded = false;
-            DOTween.Kill(transform);
-            healthManager.LoseHeart();
-            StartCoroutine(BackAfterDelay(5f)); 
-
+            Debug.Log("Hit Obstacle");
+            HandleDeath();
+        }
+        else if (collision.collider.CompareTag("Ground"))
+        {
+            Debug.Log("Hit Ground");
+            HandleDeath();
         }
     }
+
+    private void HandleDeath()
+    {
+        isDied = true;
+        isAlive = false;
+        isGrounded = false;
+
+        DOTween.Kill(transform);
+        healthManager.LoseHeart();
+        if (healthManager.GetCurrentHeart() <= 0)
+        {
+            healthManager.SetGameOverScore(distanceTravelled);
+        }
+
+        StartCoroutine(BackAfterDelay(2f));
+    }
+
     void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
